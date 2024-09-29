@@ -1,0 +1,54 @@
+Refinement 1:
+
+declare arrayList
+
+ask user for input
+add input to index of arrayList
+print list
+save index
+
+Refinement 2:
+
+declare arrayList
+
+choice 1:
+ask user for input
+add input to index of arrayList
+
+choice 2 :
+print arrayList
+
+choice 3:
+save index
+
+Refinement 3:
+
+inventory = array[10]
+
+print "newline 1.Add item to list +
+newline 2.Print list +
+newline 3.exit"
+
+integer i = 0
+string choice = ""
+
+integer variable choice = user input
+
+while choice doesnt equal 3
+
+	if statement (choice equals 1)
+
+		ask user to enter item and tell its maximum 10 items
+		item = user input
+		array[i] = item
+		i++
+	
+	else if choice equals 2
+		if (array = null)
+			print (press 1 to add item)
+		else 
+			print array
+
+
+	else if choice equals 3
+		break
