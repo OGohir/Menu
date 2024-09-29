@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Menu
+{
+    public static void main(String[] args) 
+    {
+        Scanner input = new Scanner(System.in);
+        String[] inventory = new String[5];
+        String item = " ";
+        int i = 0;
+        
+        while (true)
+        {
+            System.out.println(
+                    "\nMenu" +
+                    "\n1. Add item to list" +
+                    "\n2. Print List" +
+                    "\n3. Exit");
+            int choice = Integer.parseInt(input.nextLine());
+        
+            if (choice == 1)
+            {
+                if (i < inventory.length)
+                {
+                    System.out.println("Add item: ");
+                    item = input.nextLine();
+                    inventory[i] = item;
+                    i++;
+                } else {
+                    System.out.println("Inventory is Full.");
+                }
+            } else if (choice == 2) 
+            {
+                i = 0;
+                int list_number = 0;
+                
+                while (i < inventory.length && inventory[i] != null)
+                {
+                    list_number++;
+                    System.out.print(list_number + ".");
+                    System.out.println(inventory[i]);
+                    i++;
+                }
+            } else if (choice == 3) 
+            {
+                System.out.println("Thanks for stopping by!");
+                break;
+            }
+        }
+    }
+}
+
